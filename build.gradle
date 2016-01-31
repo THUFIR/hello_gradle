@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+version = "0.5"
+
+
+jar
+{
+    manifest.attributes("Main-Class": "HelloWorld")
+}
+
+task hello << {
+println 'hello, world'
+}
+
+
