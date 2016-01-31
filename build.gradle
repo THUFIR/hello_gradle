@@ -2,10 +2,11 @@ apply plugin: 'java'
 
 version = "0.5"
 
-
 jar
 {
-    manifest.attributes("Main-Class": "HelloWorld")
+   manifest {
+        attributes 'Main-Class': 'hello.HelloWorld'
+    }
 }
 
 task hello << {
