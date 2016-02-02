@@ -1,6 +1,21 @@
+
+
+
+
+
+
 apply plugin: 'java'
 
 version = "0.5"
+
+
+repositories {
+mavenCentral()
+}
+dependencies {
+testCompile 'junit:junit:4.8.2'
+}
+
 
 jar
 {
