@@ -22,7 +22,9 @@
   
 // In this section you declare the dependencies for your production and test code
   dependencies {      
-    testCompile 'junit:junit:4.11'
+    //testCompile 'junit:junit:4.11'
+    compile "org.codehaus.groovy:groovy-all:2.4.1"
+    testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
   }
   
   test {
@@ -37,3 +39,7 @@
       attributes 'Main-Class': 'net.bounceme.mordor.hello.HelloWorld'
     }
   }
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.4.3'
+}
