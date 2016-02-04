@@ -1,5 +1,11 @@
 // Apply the java plugin to add support for Java
   apply plugin: 'java'
+  apply plugin: 'application'
+
+
+//      attributes 'mainClassName': 'net.bounceme.mordor.hello.HelloWorld'
+
+
     
 // In this section you declare where to find the dependencies of your project
     repositories {
@@ -37,6 +43,12 @@
   jar  {
     manifest {
       attributes 'Main-Class': 'net.bounceme.mordor.hello.HelloWorld'
+    }
+  }
+
+  startScripts  {
+    manifest {
+      attributes 'mainClassName': 'net.bounceme.mordor.hello.HelloWorld'
     }
   }
 
